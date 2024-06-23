@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wave {
+  width: 100%;
+  height: auto;
+  background-color: #d8d4d4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  justify-content: space-evenly;
+}
+.thubnail {
+  width: 400px;
+  height: 200px;
+  background-color: gray;
+  text-align: center;
+  line-height: 200px;
+  font-family: fantasy;
+  font-size: 35px;
+  color: white;
+}
+.wave2 {
+  width: 400px;
+  margin-top: 1%;
+  margin-bottom: 1%s;
+}
+.jay {
+  text-align: justify;
+  padding: 15px;
+  background-color: white;
+  height: 138px;
+}
+.jay p {
+  line-height: 20px;
+}
+.btn-1 {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 5px 16px;
+  float: left;
+  margin-top: 6%;
+  background-color: white;
+}
+.btn-2 {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 5px 16px;
+  float: inline-start;
+  border-left: none;
+  margin-top: 6%;
+  background-color: white;
+}

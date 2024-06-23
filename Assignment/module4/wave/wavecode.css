@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  margin: 20px auto;
+  text-align: center;
+}
+h2 {
+  margin: 30px auto;
+  text-align: center;
+}
+.jk {
+  height: 100px;
+  width: 200px;
+  position: relative;
+}
+/* body {
+  overflow-y: hidden;
+} */
+.jk {
+  background-image: url("https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+}
+svg {
+  margin-top: 220px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+p {
+  visibility: hidden;
+}
+.btn1 {
+  position: absolute;
+  top: 555px;
+  left: 110px;
+}
+.btn2 {
+  position: absolute;
+  top: 525px;
+  left: 375px;
+}
+.btn3 {
+  position: absolute;
+  top: 450px;
+  left: 600px;
+}
+.btn4 {
+  position: absolute;
+  top: 480px;
+  right: 400px;
+}
+.btn5 {
+  position: absolute;
+  top: 460px;
+  right: 105px;
+}
+.btn1:hover p {
+  transition: 300ms all;
+  visibility: visible;
+}
+.btn2:hover p {
+  transition: 700ms all;
+  visibility: visible;
+}
+.btn3:hover p {
+  transition: 760ms all;
+  visibility: visible;
+}
+.btn4:hover p {
+  transition: 800ms all;
+  visibility: visible;
+}
+.btn5:hover p {
+  transition: 1000ms all;
+  visibility: visible;
+}

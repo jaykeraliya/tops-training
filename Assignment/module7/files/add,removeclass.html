@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .boxmodel {
+        padding: 11px;
+        border: 1px solid black;
+      }
+      .new {
+        background: pink;
+      }
+      .second {
+        background: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jquery class methods</h2>
+    <div class="boxmodel">
+      <h3>box1</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+        fugit!
+      </p>
+      <br />
+      <button id="addbutton">Add class</button>
+      <button id="removebutton">Remove class</button>
+      <button id="togglebutton">Toggle class</button>
+    </div>
+    <!-- <script src="js/jquery.js"></script> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $("#addbutton").click(function () {
+        $(".boxmodel").addClass("new");
+      });
+      $("#addbutton").click(function () {
+        $(".boxmodel").addClass("second");
+      });
+      $("#addbutton").click(function () {
+        $(".boxmodel h2").addClass("new");
+      });
+      $("#removebutton").click(function () {
+        $(".boxmodel").removeClass("second");
+      });
+      $("#togglebutton").click(function () {
+        $(".boxmodel").toggleClass("second");
+      });
+    </script>
+  </body>
+</html>

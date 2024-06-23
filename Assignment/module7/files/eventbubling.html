@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <style>
+      .parent {
+        height: 400px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 0, 0, 0.582);
+        border: 1px solid black;
+        margin: 40px auto;
+      }
+      .child1 {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: crimson;
+        border: 1px solid black;
+        /* margin: 40px auto; */
+      }
+      .sub-child1 {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: purple;
+        border: 1px solid black;
+        /* margin: 40px auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      parent
+      <div class="child1">
+        child1
+        <div class="sub-child1">sub-child1</div>
+      </div>
+    </div>
+    <!-- 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <script>
+      $("html").click(() => {
+        console.log("html clicked");
+      });
+
+      $("body").click(() => {
+        console.log("body clicked");
+      });
+
+      $(".parent").click(() => {
+        $("parent").css("color", "brown");
+        console.log("parent clicked");
+      });
+
+      $(".child1").click(() => {
+        $(this).css("color", "red");
+        console.log("child1 clicked");
+      });
+
+      $(".sub-child1").click(() => {
+        $(this).css("color", "blue");
+        console.log("sub-child1 clicked");
+      });
+
+      //event capturiug isn't supported in jquery
+    </script>
+  </body>
+</html>
+

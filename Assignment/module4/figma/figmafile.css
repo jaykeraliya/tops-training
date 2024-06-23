@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar1 {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+.logo {
+  font-size: 43px;
+  color: #1d28308a;
+}
+.navbar1 ul {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: space-around;
+  color: #1d2830;
+}
+.navbar1 ul li {
+  list-style: none;
+}
+
+.navbar1 ul li a {
+  text-decoration: none;
+  color: #1d2830;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.home_btns2 {
+  line-height: 60px;
+  border: none;
+  outline: none;
+}
+.btn-1 {
+  padding: 8px 19px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.btn-2 {
+  padding: 8px 10px;
+  color: #794cff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 7px;
+  background-color: #ece5ff;
+  border: 1px solid transparent;
+  size: 100px;
+}
+.home-btn {
+  margin-left: 50px auto;
+}
+.btns {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: row;
+  /* padding-left: 40px auto; */
+}
+.manage1 {
+  width: 26%;
+  text-align: center;
+  color: #35414b;
+  font-weight: 900;
+}
+.save {
+  border-radius: 70px;
+  background: #81c43b;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 800;
+}
+
+.getprice {
+  font-weight: 900;
+  background: #f2f9eb;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.home {
+  text-align: center;
+}
+.home1 {
+  display: flex;
+  justify-content: center;
+}
+.home1 h2 {
+  background-color: rgba(0, 128, 0, 0.836);
+  border-radius: 70px;
+}
+.home1 h3 {
+  background-color: coral;
+  border-radius: 60px;
+}
+.home5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home5 h1 {
+  font-size: xx-large;
+}
+.graph1 img {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: auto;
+  margin: 50px auto;
+}
+.btns {
+  padding-left: 500px;
+}
+.hom2_btn {
+  border-radius: 50%;
+  background-color: #794cffaf;
+}
+.jay8 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.txt {
+  display: flex;
+  justify-content: space-around;
+}
+.timeline > img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 370px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.wrapper {
+  display: flex;
+  margin-top: 100px;
+  margin: 0 auto;
+}
+.wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  margin-top: -60px;
+}
+.heading {
+  margin-left: 200px;
+  margin-top: 200px;
+}
+.resolve {
+  margin-left: 200px;
+}
+.planning {
+  margin-left: 200px;
+}
+.progress {
+  margin-left: 200px;
+}
+.making_section1 {
+  margin-left: 670px;
+  margin-top: 30px;
+}
+.mainsectionflex {
+  display: flex;
+  gap: 100px;
+  margin-left: 370px;
+  align-items: center;
+  margin-top: 40px;
+}
+.mainsectionflex2 {
+  display: flex;
+  gap: 160px;
+  margin-top: 50px;
+  margin-left: 370px;
+  align-items: center;
+}
+.section6 {
+  margin-left: -60px;
+}
+.section5 {
+  margin-left: 30px;
+}
+.employees {
+  margin: auto;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.para > p {
+  margin-left: 760px;
+  margin-top: 25px;
+}
+.employeemain > img {
+  margin-left: auto;
+}
+
+.wrapper3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.footer {
+  background-color: #794cff;
+  border-radius: 20px;
+  width: 57%;
+  height: 240px;
+  margin: auto;
+  margin-top: 19px;
+}
+.trust > h1 {
+  margin-top: 10px;
+}
+.store {
+  height: 100px;
+  display: flex;
+}
+.img3 {
+  height: 50px;
+  width: 0px auto;
+}
+.social-img {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* .work > .button{
+color: #794cff;
+} */
+
+.work > h1 {
+  margin-left: 200px;
+}
+.work > p {
+  margin-left: 200px;
+}
+.work > .btn {
+  color: #794cff;
+  margin-left: 200px;
+}
+.image4 {
+  display: flex;
+  justify-content: flex-end;
+}
+.Company {
+  list-style-type: none;
+  color: black;
+}
+.footer2 {
+  height: 230px;
+  width: 50%;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.company {
+  left: 100px;
+}
+/* .Support{
+
+}
+.Legal{
+
+}
+.Install app{
+
+}
+.bottom{
+
+}
+.icons{
+
+} */
+.main3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  /* margin-top: 10px; */
+}
+
+.icons {
+  display: flex;
+  align-items: flex-end;
+}
