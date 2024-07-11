@@ -1,0 +1,268 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main_sec {
+        width: 20%;
+        height: 600px;
+        background: aquamarine;
+        margin: auto;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        padding-top: 10px;
+    }
+
+    .c,
+    .cpp,
+    .database,
+    .html,
+    .css,
+    .php,
+    .coreJava {
+        width: 100%;
+        text-align: center;
+        padding-top: 18px;
+    }
+
+    .c input,
+    .cpp input,
+    .database input,
+    .html input,
+    .css input,
+    .php input,
+    .coreJava input {
+        width: 45%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+
+    .btn1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn1 button {
+        padding: 4px 30px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    </style>
+</head>
+<body>
+    <section id="main_sec">
+        <h2>enter marks</h2>
+        <form action="">
+            <div class="c">
+                <input type="text" id="c" placeholder="C" is required>
+            </div>
+            
+            <div class="cpp">
+                <input type="text" id="cpp" placeholder="CPP" is required>
+            </div>
+            
+            <div class="database">
+                <input type="text" id="databse" placeholder="DATABASE" is required">
+            </div>
+            
+            <div class="html">
+                <input type="text" id="html" placeholder="HTML" is required>
+            </div>
+            
+            <div class="css">
+                <input type="text" id="css" placeholder="CSS" is required>
+            </div>
+            
+            <div class="java">
+                <input type="text" id="java" placeholder="JAVA" is required>
+            </div>
+            
+            <div class="php">
+                <input type="text" id="php" placeholder="PHP" is required>
+            </div>
+        
+            <div class="corejava">
+                <input type="text" id="corejava" placeholder="COREJAVA" is required>
+            </div>
+            <div class="btn1">
+                <button>result</button>
+            </div>
+         </section>
+    
+         <script>
+        var button = document.getElementsByTagName('button')[0];
+
+        button.addEventListener('click', (event) => {
+            event.preventDefault()
+            var c = Number(document.getElementById('c').value);
+            var cpp = Number(document.getElementById('cpp').value);
+            var database = Number(document.getElementById('database').value);
+            var html = Number(document.getElementById('html').value);
+            var css = Number(document.getElementById('css').value);
+            var php = Number(document.getElementById('php').value);
+            var coreJava = Number(document.getElementById('coreJava').value);
+
+            var totalMarks = c + cpp + database + html + css + php + coreJava;
+            console.log(totalMarks)
+            console.log(totalMarks * 100 / 350)
+        })
+    </script>
+        </form>
+        </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #main {
+      width: 20%;
+      height: 600px;
+      background: aquamarine;
+      margin: auto;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      padding-top: 10px;
+    }
+
+    .c,
+    .cpp,
+    .database,
+    .html,
+    .css,
+    .php,
+    .coreJava {
+      width: 100%;
+      text-align: center;
+      padding-top: 18px;
+    }
+
+    .c input,
+    .cpp input,
+    .database input,
+    .html input,
+    .css input,
+    .php input,
+    .coreJava input {
+      width: 45%;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn button {
+      padding: 4px 30px;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    .one {
+      text-align: center;
+    }
+
+    .one label {
+      font-size: 27px;
+      font-weight: 900;
+    }
+
+    .one input {
+      padding: 6px 50px;
+      margin-left: 9px;
+    }
+
+    .two {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .two label {
+      font-size: 27px;
+      font-weight: 900;
+    }
+
+    .two input {
+      padding: 6px 50px;
+    }
+
+    .btn {
+      text-align: center;
+      margin-top: 32px;
+      margin-right: 47px;
+    }
+
+    .btn button {
+      padding: 1px 17px;
+      font-size: 34px;
+      margin-left: 54px;
+    }
+  </style>
+  <section id="main">
+    <h1>Enter Marks</h1>
+    <form action="">
+      <div class="c">
+        <input type="text" id="c" placeholder="C Language" required />
+      </div>
+      <div class="cpp">
+        <input type="text" id="cpp" placeholder="C++ Language" required />
+      </div>
+      <div class="database">
+        <input type="text" id="database" placeholder="DataBase" required />
+      </div>
+      <div class="html">
+        <input type="text" id="html" placeholder="HTML" required />
+      </div>
+      <div class="css">
+        <input type="text" id="css" placeholder="CSS" required />
+      </div>
+      <div class="php">
+        <input type="text" id="php" placeholder="PHP" required />
+      </div>
+      <div class="coreJava">
+        <input type="text" id="coreJava" placeholder="Core Java" required />
+      </div>
+      <div class="btn">
+        <button>Result</button>
+      </div>
+    </form>
+  </section>
+
+  <script>
+    let button = document.getElementsByTagName("button")[0];
+
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      let c = Number(document.getElementById("c").value);
+      let cpp = Number(document.getElementById("cpp").value);
+      let database = Number(document.getElementById("database").value);
+      let html = Number(document.getElementById("html").value);
+      let css = Number(document.getElementById("css").value);
+      let php = Number(document.getElementById("php").value);
+      let coreJava = Number(document.getElementById("coreJava").value);
+
+      let totalMarks = c + cpp + database + html + css + php + coreJava;
+      console.log(totalMarks);
+      console.log((totalMarks * 100) / 350);
+    });
+  </script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .slider {
+        height: 300px;
+        display: flex;
+        overflow: hidden;
+        margin: 100px auto;
+        width: 400px;
+        position: relative;
+      }
+      img {
+        /* width: 600px; */
+        height: 100%;
+        object-fit: cover;
+        transition: all 300ms;
+      }
+
+      .left,
+      .right {
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: lightgray;
+        top: 450px;
+        position: absolute;
+      }
+
+      .left {
+        left: 45%;
+      }
+      .right {
+        left: 55%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img
+        src="https://images.pexels.com/photos/6398585/pexels-photo-6398585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/6398587/pexels-photo-6398587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/6100149/pexels-photo-6100149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/4854415/pexels-photo-4854415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/8411864/pexels-photo-8411864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+    </div>
+    <div class="left"><i class="fa-solid fa-angle-left"></i></div>
+    <div class="right"><i class="fa-solid fa-angle-right"></i></div>
+    <script>
+      const leftBtn = document.getElementsByClassName('left')[0];
+      const rightBtn = document.getElementsByClassName('right')[0];
+
+      const sliderItemsList = document.getElementsByTagName('img');
+      let sliderMiddleItemIndex = 0;
+      let orderCounter = 0;
+      leftBtn.addEventListener('click', () => {
+        // sliderMiddleItemIndex++;
+        // sliderItemsList[sliderMiddleItemIndex].style.order = `${--moveLeft}`;
+
+        for (let i = 0; i < sliderItemsList.length; i++) {
+          sliderItemsList[i].style.left = `${
+            sliderItemsList[i].offsetLeft + 50
+          }px`;
+          sliderItemsList[i].style.transform = 'scale(1)';
+        }
+      });
+      rightBtn.addEventListener('click', () => {
+        // sliderMiddleItemIndex++;
+        // sliderItemsList[sliderMiddleItemIndex].style.order = `${++moveRight}`;
+      });
+
+      function slideLeft() {}
+      function slideRight() {}
+    </script>
+  </body>
+</html>
