@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Slider</title>
+    <style>
+      .slider {
+        position: relative;
+        width: 300px;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .slide {
+        min-width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="images\Vada_Pav.jpg" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="images\istockphoto-1349560847-612x612.jpg" alt="Image 2" />
+        </div>
+
+        <div class="slide">
+          <img src="images/1_Y3x9f9fN0LlW9XAuRhJygA.jpg" alt="Image 3" />
+        </div>
+        <div class="slide">
+          <img
+            src="images/240_F_820392634_Yl3jTarar8s6iPLKov51oLRwN49yGkgX.jpg"
+            alt="Image 4"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/bored-of-eating-same-food-try-this-indo-chinese-food-hakka-noodles-simple-and-easy-to-make-920x518.jpeg"
+            alt="Image 5"
+          />
+        </div>
+        <div class="slide">
+          <img src="images/l46620240123104736.jpeg" alt="Image 6" />
+        </div>
+      </div>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const slides = $(".slide");
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+          slides.removeClass("active");
+          slides.eq(index).addClass("active");
+          $(".slides").css("transform", `translateX(-${index * 100}%)`);
+        }
+
+        $("#next").click(function () {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          showSlide(currentIndex);
+        });
+
+        $("#prev").click(function () {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          showSlide(currentIndex);
+        });
+      });
+    </script>
+  </body>
+</html>

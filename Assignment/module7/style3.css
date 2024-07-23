@@ -1,0 +1,27 @@
+h2 {
+  text-align: center;
+}
+.container {
+  width: 530px;
+  margin: 35px auto;
+}
+.slide-inner {
+  width: 500px;
+  height: 300px;
+  padding: 3px;
+  border: #666 1px solid;
+}
+.slide-inner > img {
+  display: none;
+  height: 300px;
+  width: 500px;
+}
+.slide-inner img.set {
+  display: inline-block;
+}
+.slide-outer {
+  /* left: 0;
+  right: 0; */
+  cursor: pointer;
+  z-index: 100;
+}

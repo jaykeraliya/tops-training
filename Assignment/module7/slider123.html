@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slider123.css">
+    <script
+       src="https://code.jquery.com/jquery-3.7.1.js"
+       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+       crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="slide">
+        <div class="active"><img src="images\d859382a9dfbdb7cde7f1a430086031c.jpg"></div>
+        <div><img src="images\ghost-rider-2024-4k-hv.jpg"></div>
+        <div><img src="images\spiderman-ps4-2018-main-render.jpg"></div>
+        <div><img src="images\SpiderMan.jpeg"></div>
+    </div>
+        <div class="control">
+            <h2 class="next">Next</h2>
+            <h2 class="prev">Prev</h2>
+        </div>
+
+       <script type="text/javascript">
+        $(document).ready(function(){
+            $('.next').click(function(){
+                $('.slide').find('div.active').next().addClass('.active');
+                $('.slide').find('div.active').prev().removeClass('.active');
+            })
+        })
+
+        $('.prev').click(function(){
+                $('.slide').find('div.active').prev().addClass('.active');
+                $('.slide').find('div.active').next().removeClass('.active');
+            })
+       </script>
+</body>
+</html>

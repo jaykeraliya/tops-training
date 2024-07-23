@@ -1,0 +1,12 @@
+.navbar{
+    height: 100%;
+    width: 100%;
+    background-color: lightcoral;
+}
+.navbar a{
+display: flex;
+justify-content: center;
+display: inline-block;
+padding: 12px;
+/* background-color: brown; */
+}
