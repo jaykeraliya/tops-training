@@ -165,7 +165,15 @@ var obj={
 ### undeclare means it is not declare yet in program of js
 
 ### it is user have to declare which is needed in program without it, it is called undeclared
+```html
+<script>
+  let x;
+  console.log(x);
 
+  const y;
+  console.log(y);
+  </script>
+```
 ## Q.6 Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another. Using console.log() print out the following quote by Mother Teresa
 
 ### Ans
