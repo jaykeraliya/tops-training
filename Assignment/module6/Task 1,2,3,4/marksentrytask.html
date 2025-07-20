@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marksheet for Information Technology</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      border: 2px solid black;
+      padding: 15px 35px;
+      width: 360px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    h2{
+      font-size: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 9px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .btn {
+      padding: 9px 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Marksheet for Information Technology</h2>
+  <h3>Enter Marks</h3>
+
+  <table>
+    <tr>
+      <td>1. C Language</td>
+      <td><input type="number" id="m1"></td>
+    </tr>
+    <tr>
+      <td>2. C++ Language</td>
+      <td><input type="number" id="m2"></td>
+    </tr>
+    <tr>
+      <td>3. Database</td>
+      <td><input type="number" id="m3"></td>
+    </tr>
+    <tr>
+      <td>4. HTML</td>
+      <td><input type="number" id="m4"></td>
+    </tr>
+    <tr>
+      <td>5. CSS</td>
+      <td><input type="number" id="m5"></td>
+    </tr>
+    <tr>
+      <td>6. PHP</td>
+      <td><input type="number" id="m6"></td>
+    </tr>
+    <tr>
+      <td>7. Core Java</td>
+      <td><input type="number" id="m7"></td>
+    </tr>
+  </table>
+
+  <div class="center">
+    <button class="btn" onclick="calculate()">Result</button>
+  </div>
+
+  <div class="result-row">
+    <span>Total is : <span class="highlight" id="total">0</span> / 350</span>
+    <span>Percentage is : <span class="highlight" id="percentage">0</span> %</span>
+  </div>
+</div>
+
+<script>
+  function calculate() {
+    let m1 = parseFloat(document.getElementById("m1").value) || 0;
+    let m2 = parseFloat(document.getElementById("m2").value) || 0;
+    let m3 = parseFloat(document.getElementById("m3").value) || 0;
+    let m4 = parseFloat(document.getElementById("m4").value) || 0;
+    let m5 = parseFloat(document.getElementById("m5").value) || 0;
+    let m6 = parseFloat(document.getElementById("m6").value) || 0;
+    let m7 = parseFloat(document.getElementById("m7").value) || 0;
+
+    let total = m1 + m2 + m3 + m4 + m5 + m6 + m7;
+    let percentage = (total / 350 * 100).toFixed(2);
+
+    document.getElementById("total").innerText = total;
+    document.getElementById("percentage").innerText = percentage;
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function capitalizeFirstLetter(str) {
+      //   if (!str) return str;
+      //   return str.charAt(0).toUpperCase() + str.slice(1);
+      // }
+
+      // let myString = "jay";
+      // let capitalizedString = capitalizeFirstLetter(myString);
+
+      // console.log(capitalizedString);
+
+      // var str = "jay keraliya";
+      // var i = 0,
+      //   count = 0;
+      // while (i < 12) {
+      //   str[i] == undefined;
+      //   i++;
+      //   count++;
+      // }
+      // console.log(count);
+
+      // var str="";
+      // for (i = 0; i <= 5; i++) {
+      //   for (j = 0; j < i; j++) {
+      //     str = str + "*";
+      //   }
+      //   str = str + "\n";
+      // }
+      // console.log(str);
+
+      // var str="";
+      // for (i = 5; i >= 1; i--) {
+      //   for (j = 0; j < i; j++) {
+      //     str = str + "*";
+      //   }
+      //   str = str + "\n";
+      // }
+      // console.log(str);
+
+      function getDaysForGivenMonth(month) {
+        switch (month) {
+          case 0:
+          case 2:
+          case 4:
+          case 6:
+          case 7:
+          case 9:
+            return 31;
+          case 1:
+            return 28;
+          case 3:
+          case 5:
+          case 8:
+          case 10:
+            return 30;
+        }
+      }
+
+      // console.log(getDaysForGivenMonth(2));
+      currentMonth = new Date().getMonth();
+      console.log(currentMonth);
+      totalDaysInThisMonth = getDaysForGivenMonth(currentMonth);
+      // console.log(totalDaysInThisMonth);
+      currentDateOfThisMonth = new Date().getDate();
+      // console.log(currentDateOfThisMonth);
+      daysLeftInCurrentMonth = totalDaysInThisMonth - currentDateOfThisMonth;
+      // console.log(getMonthDaysCount);
+
+      function getTotalDaysForRemainingMonths() {
+        // find remaining months
+        // find days for each months
+        // sum those days and return it
+        }
+
+
+    //     var today=new Date();
+    //     var currentYear=today.getFullYear();
+    //     var christmasDate= new Date(currentYear+1,11,25);
+    //     console.log(today);
+    //     console.log(currentYear);
+    //     console.log(christmasDate);
+
+
+    //     let monthsRemaining = (christmasDate.getFullYear() - today.getFullYear()) * 12 
+    //                     + (christmasDate.getMonth() - today.getMonth());
+
+    // return monthsRemaining;
+    //   }
+    //   console.log(`Months remaining until Christmas: ${getRemainingMonthsUntilChristmas()}`);
+
+
+      getRemainingDays =
+        daysLeftInCurrentMonth + getTotalDaysForRemainingMonths() + 25;
+      console.log(getRemainingDays);
+    </script>
+  </body>
+</html>

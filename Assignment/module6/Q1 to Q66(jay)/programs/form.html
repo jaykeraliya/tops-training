@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="validate" onsubmit="return validation()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="username"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="email"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="password"><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" placeholder="address"><br><br>
+   
+    <!-- <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="username"><br><br> -->
+
+
+    <script>
+      document.getElementById('username').value;
+      document.getElementById('email').value;
+      document.getElementById('password').value;
+
+
+if(username===""){
+  alert("username must be filled out");
+}
+if(email===""){
+  alert("enter valid email address");
+}
+if(password===""){
+  alert("enter valid password");
+}
+else if(password.length < 7){
+  alert("enter valid characters");
+}
+// function validateEmail(){
+//   var emailPattern=;
+// }
+    </script>
+  </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>doc</title>
+  </head>
+  <body>
+    <p id="jk"></p>
+
+    <h3>Click the button and check password</h3>
+    <label>password:</label><br />
+    <input type="Password" id="showToHide" /><br />
+    <input type="checkbox" onclick="jk()" />show Password
+
+    <script>
+      function jk() {
+        var checker = document.getElementById("showToHide");
+        if (checker.type === "Password") {
+          checker.type = "text";
+        } else {
+          checker.type = "Password";
+        }
+      }
+    </script>
+  </body>
+</html>
