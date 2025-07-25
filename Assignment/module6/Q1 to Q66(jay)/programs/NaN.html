@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nan function</title>
+    <p>isNaN() returns true if a value is NaN:</p>
+  </head>
+  <body>
+    <p id="jk"></p>
+    <script>
+      var result =
+        "Is 123 NaN?" +
+        isNaN(123) +
+        "<br>" +
+        "Is infinite NaN?" +
+        isNaN(infinite);
+      document.getElementById("jk").innerHTML = result;
+    </script>
+  </body>
+</html>

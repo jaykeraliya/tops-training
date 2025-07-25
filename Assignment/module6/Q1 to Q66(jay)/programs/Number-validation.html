@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="new-form" onsubmit="return FormValidation()">
+      Phone-Number:<input
+        type="number"
+        name="phone-number"
+        placeholder="phone-number"
+      /><br />
+      <input type="Submit" value="register" />
+    </form>
+    <script>
+      function FormValidation() {
+        var number = document.forms["new-form"]["phone-number"].value;
+        if (number.length == 10) {
+          console.log("this is valid number");
+        } else if (number.length == 0) {
+          console.log("please enter your phone-number");
+        } else {
+          console.log("this is not valid number");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

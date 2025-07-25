@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function CurrentDayAndTime() {
+        const now = new Date();
+
+        const day = now.toLocaleString("default", { weekday: "long" });
+
+        
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours === 0 ? 12 : hours;
+
+        const lastDigitOfSeconds = seconds % 10;
+
+        console.log(`Today is ${day}.`);
+        console.log(
+          `Current Time is ${hours} ${ampm}: ${minutes} : ${lastDigitOfSeconds}`
+        );
+      }
+
+      CurrentDayAndTime();
+    </script>
+  </body>
+</html>
