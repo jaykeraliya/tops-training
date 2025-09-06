@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Vehicle Sale</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f9fafb;
+        color: #1e293b;
+        line-height: 1.6;
+      }
+
+      .header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+        color: #fff;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+      }
+
+      .about-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 40px;
+      }
+
+      .about-text {
+        flex: 1 1 500px;
+      }
+
+      .about-text h2 {
+        color: #1d4ed8;
+        margin-top: 20px;
+      }
+
+      .about-text ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .about-text ul li {
+        background: #e0e7ff;
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      .about-image {
+        flex: 1 1 400px;
+        text-align: center;
+      }
+
+      .about-image img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .footer {
+        text-align: center;
+        padding: 15px;
+        background: #1e293b;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      /*==== MEDIA QUERIES ==== */
+      /* 1. Small Mobile (max 480px) */
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 1.8rem;
+        }
+        .header p {
+          font-size: 1rem;
+        }
+        .about-section {
+          padding: 20px 10px;
+          gap: 20px;
+        }
+        .about-text {
+          font-size: 14px;
+        }
+        .about-image img {
+          max-width: 100%;
+        }
+      }
+
+      /* 2. Large Mobile / Small Tablets (481px - 767px) */
+      @media (min-width: 481px) and (max-width: 767px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+        .about-text {
+          font-size: 15px;
+        }
+        .about-image img {
+          max-width: 90%;
+        }
+      }
+
+      /* 3. Tablets Portrait (768px - 991px) */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+        .about-section {
+          flex-direction: column;
+        }
+        .about-text, .about-image {
+          flex: 1 1 100%;
+        }
+        .about-image img {
+          max-width: 80%;
+        }
+      }
+
+      /* 4. Tablets Landscape / Small Laptops (992px - 1199px) */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .header h1 {
+          font-size: 2.4rem;
+        }
+        .about-section {
+          flex-direction: row;
+          gap: 30px;
+        }
+        .about-text {
+          font-size: 16px;
+        }
+      }
+
+      /* 5. Large Desktops (1200px and above) */
+      @media (min-width: 1200px) {
+        .header h1 {
+          font-size: 2.8rem;
+        }
+        .about-text {
+          font-size: 18px;
+        }
+        .about-image img {
+          max-width: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>About Us</h1>
+      <p>Your trusted partner in buying & selling old vehicles</p>
+    </header>
+
+    <section class="about-section">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          Welcome to <strong>Vehicle Sale</strong>, a platform dedicated to
+          helping people buy and sell pre-owned vehicles with ease and
+          transparency. We aim to connect vehicle owners with genuine buyers by
+          offering a secure, fast, and user-friendly experience.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to make second-hand vehicle transactions trustworthy,
+          affordable, and accessible for everyone. We believe every vehicle has
+          value, and we help you find the right buyer or the perfect ride within
+          your budget.
+        </p>
+
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>✔️ Wide selection of verified vehicles</li>
+          <li>✔️ Easy booking & wishlist system</li>
+          <li>✔️ Safe & transparent transactions</li>
+          <li>✔️ 24/7 customer support</li>
+        </ul>
+      </div>
+
+      <div class="about-image">
+        <img
+          src="https://img.freepik.com/free-photo/retro-car-parked-street_1232-2988.jpg"
+          alt="About Vehicle Sale"
+        />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Old Vehicle Sale. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

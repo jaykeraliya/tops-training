@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Booked Vehicles</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .vehicle-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .vehicle-card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .vehicle-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+      .vehicle-card h3 {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .vehicle-card p {
+        font-size: 14px;
+        margin: 4px 0;
+      }
+      .delete-btn {
+        background: crimson;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .delete-btn:hover {
+        background: darkred;
+      }
+
+      /* ---- MEDIA QUERIES ---- */
+      /* 1. Small devices (≥480px) */
+      @media (min-width: 480px) {
+        h2 {
+          font-size: 22px;
+        }
+        .vehicle-card {
+          width: 90%;
+          font-size: 23px;
+        }
+        .vehicle-card h3 {
+          font-size: 17px;
+        }
+        .vehicle-card p {
+          font-size: 14px;
+        }
+        .vehicle-card img {
+          height: 130px; /* medium height for mobile */
+          object-fit: cover;
+        }
+        .vehicle-card {
+          padding: 10px;
+        }
+      }
+
+      /* 2. Tablets (≥768px) */
+      @media (min-width: 768px) {
+        .vehicle-container {
+          justify-content: flex-start;
+        }
+        .vehicle-card {
+          width: 45%;
+        }
+        h2 {
+          font-size: 24px;
+        }
+        .vehicle-card h3 {
+          font-size: 18px;
+        }
+      }
+
+      /* 3. Small laptops (≥992px) */
+      @media (min-width: 992px) {
+        .vehicle-card {
+          width: 30%;
+        }
+        h2 {
+          font-size: 26px;
+        }
+        .vehicle-card h3 {
+          font-size: 19px;
+        }
+        .vehicle-card p {
+          font-size: 15px;
+        }
+      }
+
+      /* 4. Desktops (≥1200px) */
+      @media (min-width: 1200px) {
+        .vehicle-card {
+          width: 23%;
+        }
+        h2 {
+          font-size: 28px;
+        }
+      }
+
+      /* 5. Large Desktops / Wide Screens (≥1600px) */
+      @media (min-width: 1600px) {
+        .vehicle-container {
+          gap: 25px;
+        }
+        .vehicle-card {
+          width: 20%;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        .vehicle-card h3 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My Booked Vehicles</h2>
+    <div class="vehicle-container" id="bookedContainer"></div>
+
+    <script>
+      const vehicles = [
+        {
+          name: "Maruti Swift 2015",
+          price: "₹2.5 Lakhs",
+          image: "images/Maruti-Swift-2015.jpg",
+          description: "Well-maintained petrol variant with good mileage.",
+        },
+        {
+          name: "Hero Splendor 2017",
+          price: "₹35,000",
+          image: "images/hero splender 2017.jpg",
+          description: "Single owner. Recently serviced.",
+        },
+        {
+          name: "Hyundai i10 2014",
+          price: "₹2.2 Lakhs",
+          image: "images/hyndai i10 2014.jpg",
+          description: "Petrol variant, low maintenance, good condition.",
+        },
+        {
+          name: "Honda Activa 2016",
+          price: "₹40,000",
+          image: "images/honda activa 2016.jpg",
+          description: "Scooter with excellent mileage and condition.",
+        },
+        {
+          name: "Tata Nano 2013",
+          price: "₹1.5 Lakhs",
+          image: "images/tata nano 2013.png",
+          description: "Compact city car, ideal for small families.",
+        },
+        {
+          name: "Bajaj Pulsar 150 2015",
+          price: "₹48,000",
+          image: "images/bajaj-pulsar 2017.jpg",
+          description: "Powerful and reliable, recent battery replacement.",
+        },
+        {
+          name: "Ford Figo 2012",
+          price: "₹1.8 Lakhs",
+          image: "images/FORD-Figo-2012.jpg",
+          description: "Diesel engine with excellent fuel economy.",
+        },
+        {
+          name: "Suzuki Access 125 2018",
+          price: "₹50,000",
+          image: "images/Suzuki-Access-125-SE-CBS_Mettalic-Sonic-Silver.jpg",
+          description: "Great condition with insurance up to 2026.",
+        },
+        {
+          name: "Mahindra Bolero 2011",
+          price: "₹3.5 Lakhs",
+          image: "images/mahindra-bolero 2011.jpg",
+          description: "Rugged SUV, ideal for rural and urban use.",
+        },
+        {
+          name: "TVS Apache RTR 160 2016",
+          price: "₹45,000",
+          image: "images/TVS Apache RTR 160 2016.jpg",
+          description: "Stylish and well-maintained sports bike.",
+        },
+        {
+          name: "Renault Kwid 2017",
+          price: "₹2.7 Lakhs",
+          image: "images/Renault-Kwid-2017.jpg",
+          description: "Compact hatchback with touchscreen and AC.",
+        },
+        {
+          name: "Royal Enfield Classic 350 2014",
+          price: "₹85,000",
+          image: "images/Royal-Enfield-Classic-350.jpg",
+          description: "Iconic ride, recently serviced, excellent sound.",
+        },
+        {
+          name: "Mahindra XUV500 2012",
+          price: "₹6.0 Lakhs",
+          image: "images/xuv-500-2012-prod-var.jpg",
+          description: "7-seater SUV, powerful engine, spacious interior.",
+        },
+        {
+          name: "Toyota Fortuner 2015",
+          price: "₹14.5 Lakhs",
+          image: "images/toyota fortuner 2015.jpg",
+          description: "Luxury SUV with excellent off-road capabilities.",
+        },
+        {
+          name: "Honda City 2014",
+          price: "₹6.5 Lakhs",
+          image: "images/honda city 2014.jpg",
+          description: "Reliable and fuel-efficient sedan.",
+        },
+        {
+          name: "BMW X1 2013",
+          price: "₹12.5 Lakhs",
+          image: "images/bmw x1 2013.jpg",
+          description: "Luxury crossover with excellent performance.",
+        },
+      ];
+
+      function loadBooked() {
+        const booked = JSON.parse(localStorage.getItem("booked")) || [];
+        const container = document.getElementById("bookedContainer");
+        container.innerHTML = "";
+
+        if (booked.length === 0) {
+          container.innerHTML = "<p>No booked vehicles yet.</p>";
+          return;
+        }
+
+        booked.forEach((v, index) => {
+          container.innerHTML += `
+          <div class="vehicle-card">
+            <img src="${v.image}" alt="${v.name}">
+            <h3>${v.name}</h3>
+            <p><strong>Price:</strong> ${v.price}</p>
+            <p><strong>Description:</strong> ${v.description}</p>
+            <hr>
+            <p><strong>Customer:</strong> ${v.customer?.name || "N/A"}</p>
+            <p><strong>Phone:</strong> ${v.customer?.phone || "N/A"}</p>
+            <p><strong>Address:</strong> ${v.customer?.address || "N/A"}</p>
+            <p><strong>Payment:</strong> ${v.payment || "N/A"}</p>
+            <button class="delete-btn" onclick="deleteFromBooked(${index})">Delete</button>
+          </div>
+        `;
+        });
+      }
+
+      function deleteFromBooked(index) {
+        let booked = JSON.parse(localStorage.getItem("booked")) || [];
+        booked.splice(index, 1);
+        localStorage.setItem("booked", JSON.stringify(booked));
+        loadBooked();
+      }
+
+      loadBooked();
+    </script>
+  </body>
+</html>

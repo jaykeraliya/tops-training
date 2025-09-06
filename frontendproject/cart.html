@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7fb;
+        margin: 0;
+      }
+
+      /* Dark Navbar */
+      /* nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 40px;
+        background: #222;
+        border-bottom: 1px solid #333;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      nav .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #f8f9fa;
+        margin: 0;
+      }
+      nav .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+      nav .nav-links li {
+        display: inline-block;
+      }
+      nav .nav-links a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 15px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+      nav .nav-links a:hover {
+        background: #007bff;
+        color: #fff;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #333;
+      } */
+
+      /* Navbar container */
+      nav {
+        background: #111;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      /* Logo */
+      nav .logo {
+        color: #fff;
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* Nav list */
+      nav .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      /* Normal links */
+      nav .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 6px 10px;
+        transition: color 0.3s ease;
+      }
+
+      nav .nav-links a:hover {
+        color: #00bcd4; /* light blue hover */
+      }
+
+      /* Buttons */
+      nav .nav-links button {
+        padding: 8px 16px;
+        background: #007bff;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      nav .nav-links button:hover {
+        background: #0056b3;
+      }
+
+      .vehicle-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 25px;
+        padding: 15px 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: start;
+      }
+
+      .vehicle-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .vehicle-card:hover {
+        transform: translateY(-5px);
+      }
+      .vehicle-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .vehicle-card h3 {
+        font-size: 16px;
+        margin: 8px 0 4px;
+        color: #222;
+      }
+      .vehicle-card p {
+        margin: 4px 0;
+        color: #555;
+        font-size: 14px;
+      }
+
+      .remove-btn {
+        margin-top: 8px;
+        padding: 7px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        background: #e53935;
+        color: #fff;
+        transition: background 0.3s ease;
+      }
+      .remove-btn:hover {
+        background: #c62828;
+      }
+
+      .empty {
+        grid-column: 1/-1;
+        text-align: center;
+        color: #666;
+        padding: 40px 0;
+      }
+      /* Extra Small Devices (Mobile Portrait, up to 480px) */
+      @media (max-width: 480px) {
+        nav {
+          flex-direction: column;
+          /* padding: 10px 20px; */
+          text-align: center;
+        }
+        nav .nav-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .nav-links ul li a {
+          font-size: 18px;
+        }
+        .vehicle-container {
+          grid-template-columns: 1fr;
+          padding: 10px;
+        }
+        .vehicle-card {
+          max-width: 100%;
+          font-size: 2.8em;
+        }
+      }
+
+      /* Small Devices (Mobile Landscape, 481px to 767px) */
+      @media (min-width: 481px) and (max-width: 767px) {
+        .vehicle-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+        .vehicle-card {
+          font-size: 1em;
+        }
+        nav .nav-links a {
+          font-size: 14px;
+        }
+      }
+
+      /* Medium Devices (Tablets, 768px to 991px) */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .vehicle-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .vehicle-card {
+          font-size: 1.05em;
+        }
+        nav .nav-links a {
+          font-size: 15px;
+        }
+      }
+
+      /* Large Devices (Small Laptops, 992px to 1199px) */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .vehicle-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .vehicle-card {
+          font-size: 4em;
+          margin-top: 8px;
+        }
+        nav .nav-links a {
+          font-size: 20px;
+        }
+      }
+
+      /* Extra Large Devices (Desktops, 1200px and above) */
+      @media (min-width: 1200px) {
+        .vehicle-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .vehicle-card {
+          font-size: 2.5em;
+        }
+        nav .nav-links a {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body><nav>
+  <h2 class="logo">Old Vehicle Sale</h2>
+  <ul class="nav-links">
+    <!-- Links -->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="vehicles.html">Vehicles</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="booked.html">Booked</a></li>
+    <li><a href="about.html">About</a></li>
+
+    <!-- Buttons -->
+    <li><button onclick="location.href='contact.html'">Contact</button></li>
+    <li><button onclick="location.href='login.html'">Login</button></li>
+    <li><button onclick="location.href='signup.html'">Signup</button></li>
+  </ul>
+</nav>
+
+    <h1>My Cart</h1>
+    <div id="cart-container" class="vehicle-container"></div>
+
+    <script>
+      function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const container = document.getElementById("cart-container");
+        container.innerHTML = "";
+
+        if (cart.length === 0) {
+          container.innerHTML = "<p class='empty'>No vehicles in cart.</p>";
+          return;
+        }
+
+        cart.forEach((v, index) => {
+          const card = document.createElement("div");
+          card.classList.add("vehicle-card");
+
+          card.innerHTML = `
+          <img src="${v.image}" alt="${v.name}">
+          <h3>${v.name}</h3>
+          <p>${v.description}</p>
+          <p><strong>Price: ${v.price}</strong></p>
+          <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+          container.appendChild(card);
+        });
+      }
+
+      function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+      }
+
+      loadCart();
+
+      function addToCart(vehicle) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // 1. Check for duplicate by ID
+        const exists = cart.some((v) => v.id === vehicle.id);
+        if (exists) {
+          alert("This vehicle is already in your cart!");
+          return;
+        }
+
+        // 2. If cart has 7 items, clear it
+        if (cart.length >= 7) {
+          alert("Cart already has 7 vehicles. Clearing cart...");
+          cart = [];
+        }
+
+        // 3. Add new vehicle
+        cart.push(vehicle);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Vehicle added to cart!");
+      }
+    </script>
+  </body>
+</html>

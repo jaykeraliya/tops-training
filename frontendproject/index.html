@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Old Vehicle Sale - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <script src="script.js"></script>
+        <style>
+    /* Hero Section Styles */
+    .hero {
+      background: url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .hero button {
+      padding: 12px 20px;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .hero button:hover {
+      background: #0056b3;
+    }
+
+/* Navbar container */
+nav {
+  background: #111;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+nav .logo {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav list */
+nav .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Normal links */
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: #00bcd4; /* light blue hover */
+}
+
+/* Buttons */
+nav .nav-links button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav .nav-links button:hover {
+  background: #0056b3;
+}
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <h2 class="logo">Old Vehicle Sale</h2>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="vehicles.html">Vehicles</a>
+                </li>
+                <li>
+                    <a href="cart.html">Cart</a>
+                </li>
+                <li>
+                    <a href="booked.html">Booked</a>
+                </li>
+                <li>
+                    <a href="admin.html">Admin</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <button onclick="location.href='contact.html'">Contact</button>
+                </li>
+                <li>
+                    <button onclick="location.href='login.html'">Login</button>
+                </li>
+                <li>
+                    <button onclick="location.href='signup.html'">Signup</button>
+                </li>
+            </ul>
+        </nav>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Find Your Perfect Ride</h1>
+            <p>Explore the best deals on old vehicles at unbeatable prices</p>
+        </section>
+        <!-- Vehicle List -->
+        <div class="vehicles-list">
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-section links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Browse Vehicles</a>
+                            </li>
+                            <li>
+                                <a href="#">Sell Your Vehicle</a>
+                            </li>
+                            <li>
+                                <a href="#">Financing</a>
+                            </li>
+                            <li>
+                                <a href="#">Vehicle History</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section links">
+                        <h3>Vehicles</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Classic Cars</a>
+                            </li>
+                            <li>
+                                <a href="#">Wintage Cars</a>
+                            </li>
+                            <li>
+                                <a href="#">Recently Added</a>
+                            </li>
+                            <li>
+                                <a href="#">Vehicle Details</a>
+                            </li>
+                            <li>
+                                <a href="#">Vehicle Sellers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section resources">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#">Buying Guide</a>
+                            </li>
+                            <li>
+                                <a href="#">Warranty Info</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Reviews</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact">
+                        <h3>Contact Us</h3>
+                        <p>456 Vintage Ave, Motor City</p>
+                        <p>Email: support@classicwheels.com</p>
+                        <p>Phone: +1 800 555 1234</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="footer-bottom">
+                            &copy; 2025 Old Vehicles. All rights reserved.
+                        </div>
+                    </footer>
+                </body>
+            </html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel - Manage Vehicles</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f9;
+        display: flex;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 220px;
+        background: #2c3e50;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+      }
+      .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+      .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        border-radius: 6px;
+        transition: background 0.3s;
+      }
+      .sidebar ul li a:hover {
+        background: #1abc9c;
+      }
+
+      /* Content */
+      .content {
+        margin-left: 220px;
+        padding: 20px;
+        flex: 1;
+      }
+
+      h2 {
+        margin: 20px 0;
+      }
+
+      .form-container {
+        max-width: 700px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .form-container input,
+      .form-container textarea {
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      .form-container button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .form-container button:hover {
+        background: #218838;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background: #f0f0f5;
+      }
+      .delete-btn {
+        background: #dc3545;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .delete-btn:hover {
+        background: #c82333;
+      }
+
+      /* ===== Responsive Media Queries ===== */
+
+      /* 1. Extra Small devices (max 480px) - small mobiles */
+      @media (max-width: 480px) {
+        body {
+          flex-direction: column;
+        }
+        .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+        .content {
+          margin-left: 0;
+          padding: 15px;
+        }
+        table,
+        th,
+        td {
+          font-size: 12px;
+        }
+        th,
+        td {
+          padding: 8px;
+        }
+        .form-container {
+          padding: 15px;
+        }
+      }
+
+      /* 2. Small devices (481px - 767px) - mobiles/landscape */
+      @media (min-width: 481px) and (max-width: 767px) {
+        .sidebar {
+          width: 160px;
+        }
+        .content {
+          margin-left: 160px;
+          padding: 15px;
+        }
+        table,
+        th,
+        td {
+          font-size: 13px;
+        }
+        .form-container {
+          max-width: 100%;
+        }
+      }
+
+      /* 3. Medium devices (768px - 991px) - tablets */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .sidebar {
+          width: 180px;
+        }
+        .content {
+          margin-left: 180px;
+        }
+        table,
+        th,
+        td {
+          font-size: 14px;
+        }
+        .form-container {
+          max-width: 90%;
+        }
+      }
+
+      /* 4. Large devices (992px - 1199px) - small laptops */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .sidebar {
+          width: 200px;
+        }
+        .content {
+          margin-left: 200px;
+        }
+        table,
+        th,
+        td {
+          font-size: 15px;
+        }
+      }
+
+      /* 5. Extra Large devices (1200px and above) - desktops */
+      @media (min-width: 1200px) {
+        .sidebar {
+          width: 220px;
+        }
+        .content {
+          margin-left: 220px;
+        }
+        table,
+        th,
+        td {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="admin.html">Dashboard</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="booked.html">Booked</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2>Manage Vehicles</h2>
+
+      <div class="form-container">
+        <h3>Add New Vehicle</h3>
+        <form id="vehicleForm">
+          <input type="text" id="vName" placeholder="Vehicle Name" required />
+          <input type="text" id="vPrice" placeholder="Price" required />
+          <input type="text" id="vImage" placeholder="Image URL" required />
+          <textarea
+            id="vDescription"
+            placeholder="Description"
+            required
+          ></textarea>
+          <button type="submit">Add Vehicle</button>
+        </form>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="vehicleTableBody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      const form = document.getElementById("vehicleForm");
+      const tbody = document.getElementById("vehicleTableBody");
+
+      function getVehicles() {
+        return JSON.parse(localStorage.getItem("vehicles")) || [];
+      }
+
+      function saveVehicles(list) {
+        localStorage.setItem("vehicles", JSON.stringify(list));
+      }
+
+      function renderVehicles() {
+        const vehicles = getVehicles();
+        tbody.innerHTML = "";
+
+        vehicles.forEach((v, index) => {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+          <td><img src="${v.image}" alt="${v.name}" width="80"></td>
+          <td>${v.name}</td>
+          <td>${v.price}</td>
+          <td>${v.description}</td>
+          <td><button class="delete-btn" onclick="deleteVehicle(${index})">Delete</button></td>
+        `;
+          tbody.appendChild(row);
+        });
+      }
+
+      function deleteVehicle(index) {
+        const vehicles = getVehicles();
+        vehicles.splice(index, 1);
+        saveVehicles(vehicles);
+        renderVehicles();
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const vehicle = {
+          name: document.getElementById("vName").value,
+          price: document.getElementById("vPrice").value,
+          image: document.getElementById("vImage").value,
+          description: document.getElementById("vDescription").value,
+        };
+
+        const vehicles = getVehicles();
+        vehicles.push(vehicle);
+        saveVehicles(vehicles);
+
+        form.reset();
+        renderVehicles();
+      });
+
+      renderVehicles();
+    </script>
+  </body>
+</html>
