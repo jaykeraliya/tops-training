@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.jay {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.jk {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid red;
+  color: rgb(241, 183, 183);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 50% 100%, 0 87%);
+  background-image: url(https://images.pexels.com/photos/20116329/pexels-photo-20116329/free-photo-of-postal-altiplano-chileno.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.logo {
+  width: 78px;
+  height: 39px;
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  border: 1px solid red;
+}
+
+span {
+  background-color: cadetblue;
+  width: 90px;
+  color: white;
+}
+
+.ul > ul {
+  box-sizing: border-box;
+  list-style: none;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home {
+  color: rgb(206, 140, 104);
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.welcom {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: white;
+}
+hr {
+  width: 50px;
+}
+
+.lorem {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fa-angle-left {
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
+  padding: 12px;
+  background-color: aliceblue;
+}
+
+.fa-angle-right {
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
+  padding: 12px;
+  background-color: rgb(17, 204, 98);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.button1 {
+  background-color: brown;
+  border: 1px solid red;
+  height: 30px;
+  width: 200px;
+  color: aliceblue;
+}
+
+.button2 {
+  background-color: rgb(236, 222, 222);
+  border: 1px solid red;
+  height: 30px;
+  width: 130px;
+}
+
+.icon1 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: rgba(219, 227, 235, 0.993);
+  margin-left: 49%;
+  margin-top: -25px;
+  z-index: 1;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.fa-infinity {
+  border: 1px solid red;
+  color: red;
+  background-color: bisque;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fa-heart {
+  border: 1px solid red;
+  color: red;
+  background-color: bisque;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fa-lightbulb {
+  border: 1px solid red;
+  color: red;
+  background-color: bisque;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fa-window-restore {
+  border: 1px solid red;
+  color: red;
+  background-color: bisque;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.footer_text {
+  width: 250px;
+  display: flex;
+  text-align: center;
+}
+
+.footer_text1 {
+  width: 250px;
+  display: flex;
+  text-align: center;
+}
+
+.footer_text2 {
+  width: 250px;
+  display: flex;
+  text-align: center;
+}
+
+.footer_text3 {
+  width: 250px;
+  display: flex;
+  text-align: center;
+}
+
+.client {
+  text-align: center;
+}
+
+.client p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer .icon {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+}
+.footer .icon .border {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 900ms;
+}
+.footer:hover .border {
+  transform: rotate(45deg);
+}
+.support .icon {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+}
+.support .icon .border {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 900ms;
+}
+
+.support:hover .border {
+  transform: rotate(45deg);
+}
+
+.footer .jaydeep {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+}
+
+.footer .jaydeep .border {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 900ms;
+}
+
+.footer:hover .border {
+  transform: rotate(45deg);
+}
+
+.idea .icon {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+}
+.idea .icon .border {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 900ms;
+}
+.idea:hover .border {
+  transform: rotate(45deg);
+}
+.free .icon {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+}
+.free .icon .border {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 900ms;
+}
+
+.free:hover .border {
+  transform: rotate(45deg);
+}
